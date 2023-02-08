@@ -1,0 +1,10 @@
+Day 3 : 11-01-2023
+1.	using fs module store product details like pid,name,price, qty etc.
+a. product id must be unique, price must be > 500, qty 10 etc.
+let product = {pid:pidValue,pname:pnameValue,price:priceValue,url:urlValue}
+    let products = JSON.parse(fs.readFileSync("products.json"));
+    products.push(product);
+    fs.writeFileSync("products.json",JSON.stringify(products));
+    response.send("Product Data stored");
+
+VALIDATION IS INCOMPLETE.
